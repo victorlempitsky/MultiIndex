@@ -4,7 +4,7 @@
 	
 \section SOFT Install third-part software
 
-To use our code you should install some third-part software
+To use our code you should first install some third-party software
 
 - CMake <a href=http://www.cmake.org/cmake/resources/software.html>www.cmake.org/cmake/resources/software.html</a>
 - Boost <a href=http://www.boost.org>www.boost.org</a>
@@ -12,7 +12,7 @@ To use our code you should install some third-part software
 
 \section CMAKE Correct CMakeLists.txt file
 
-You should insert path to Boost and BLAS sources and libraries in file CMakeLists.txt.
+You should also insert the path to Boost and BLAS (coming as a part of MKL) sources and libraries in CMakeLists.txt.
 
 \code
 ##########################################################################################
@@ -85,18 +85,20 @@ TARGET_LINK_LIBRARIES (searcher_tester ${REQUIRED_BLAS_LIBS})
 \endcode
 
 The list of libraries to link (${REQUIRED_BLAS_LIBS}) may differ from the above.
-You can get the list for your architecture <a href=http://software.intel.com/en-us/articles/intel-mkl-link-line-advisor/>here</a>. 
+You can get the list for your architecture here: <a href=http://software.intel.com/en-us/articles/intel-mkl-link-line-advisor/>here</a>. 
 
 \section BUILD Build project
 
-- create folder "build" in directory with source files
+To build the project:
+
+- create the "build" subdirectory in the directory with the source files
 - (for Windows users) run "make_project.bat"
-- (for Unix users) do next steps
+- (for Unix users) do the following steps
 \code
 cd build
 cmake ..
 \endcode 
 
-These operations create Solution for VisualStudio (Windows) or makefile (Unix). Then you can build the project.
+These operations create either a Solution for the VisualStudio (Windows) or a makefile (Unix). You can then build the project.
 
 **/
